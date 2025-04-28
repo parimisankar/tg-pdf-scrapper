@@ -1,52 +1,25 @@
-# TG PDF Scrapper
+## Autorun Setup (Run TG PDF Scrapper on Windows Startup)
 
-![Build](https://img.shields.io/badge/build-stable-brightgreen)
-![Last Updated](https://img.shields.io/badge/last%20updated-April%202025-blue)
-![License](https://img.shields.io/badge/license-Freeware-yellow)
+### Option 1 — Manual (Task Scheduler)
 
----
+Follow these steps:
+- Open Task Scheduler
+- Create Basic Task
+- Trigger: At system startup
+- Action: Start program -> TG_PDF_Scrapper.exe
 
-**TG PDF Scrapper** is a lightweight tool to automatically download PDF files from selected Telegram channels into a Windows folder.
-
----
-
-## Features
-- 📥 Download all PDFs from given channels
-- 📅 Only download PDFs from last 7 days
-- 🚀 Scheduled daily sync every 24 hours
-- 🔁 Silent auto-reconnection on network errors
-- 📋 Duplicate PDF protection
+(See detailed guide in this repo.)
 
 ---
 
-## How To Run
-1. Install Python 3.10+ and required libraries:
-pip install pyrogram tgcrypto
+### Option 2 — Automatic (One-click Script)
 
+If you prefer one-click setup:
+
+1. Open PowerShell as Administrator
 2. Run:
-python main.py or double-click `launch_TG_PDF_Scrapper.bat`
 
-3. Enter API ID, API Hash, Phone number during first login.
-
-4. Enter your list of channels (only usernames like `researchreportss`).
-
-5. Choose your download folder.
-
----
-
-## License
-Freeware License. Use at your own risk.
-
----
-
-## Contributing
-We welcome contributions! Please read `CONTRIBUTING.md`.
-
----
-
-## Screenshots
-(Installation GIF and folder examples coming soon.)
-
----
-
-Made with ❤️ by Jai.
+   ```powershell
+   Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
+   cd path\to\TG_PDF_Scrapper\scripts
+   .\create_task.ps1
